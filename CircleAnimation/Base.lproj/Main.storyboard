@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="CircleAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sEG-oU-Li0" userLabel="TopView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="blue-circle.png" translatesAutoresizingMaskIntoConstraints="NO" id="c6q-XO-Rfv">
+                                        <rect key="frame" x="-100" y="-250" width="800" height="800"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a topview." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtA-cb-KKz">
+                                        <rect key="frame" x="234" y="139" width="132" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S6A-xt-2qk">
+                                        <rect key="frame" x="276" y="167" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="onTopSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="XCE-uP-GwP"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="gtA-cb-KKz" secondAttribute="centerX" id="8Oa-nh-9ch"/>
+                                    <constraint firstItem="S6A-xt-2qk" firstAttribute="top" secondItem="gtA-cb-KKz" secondAttribute="bottom" constant="7.5" id="KSv-M0-kWh"/>
+                                    <constraint firstAttribute="centerX" secondItem="c6q-XO-Rfv" secondAttribute="centerX" id="LAC-Wo-V5Z"/>
+                                    <constraint firstAttribute="centerY" secondItem="c6q-XO-Rfv" secondAttribute="centerY" id="TRX-Cn-ibK"/>
+                                    <constraint firstAttribute="centerX" secondItem="S6A-xt-2qk" secondAttribute="centerX" id="TbQ-WM-0dy"/>
+                                    <constraint firstAttribute="centerY" secondItem="gtA-cb-KKz" secondAttribute="centerY" id="kTT-aV-M5h"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lUW-It-uxa" userLabel="BottomView">
+                                <rect key="frame" x="0.0" y="300" width="600" height="300"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="purple-circle.png" translatesAutoresizingMaskIntoConstraints="NO" id="6I7-W2-Dah">
+                                        <rect key="frame" x="-100" y="-250" width="800" height="800"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a bottomview." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1v-SF-NvF">
+                                        <rect key="frame" x="219" y="139" width="161.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cmz-uU-I9I">
+                                        <rect key="frame" x="276" y="168" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="onBottomSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="uEG-Z1-j1P"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="6I7-W2-Dah" secondAttribute="centerX" id="39Z-Fk-vJB"/>
+                                    <constraint firstAttribute="centerX" secondItem="W1v-SF-NvF" secondAttribute="centerX" id="3Mb-iA-By1"/>
+                                    <constraint firstAttribute="centerY" secondItem="W1v-SF-NvF" secondAttribute="centerY" id="HBt-Um-B8O"/>
+                                    <constraint firstItem="Cmz-uU-I9I" firstAttribute="top" secondItem="W1v-SF-NvF" secondAttribute="bottom" constant="8.5" id="e2u-Kv-Jdj"/>
+                                    <constraint firstAttribute="centerY" secondItem="6I7-W2-Dah" secondAttribute="centerY" id="elZ-Iz-Yim"/>
+                                    <constraint firstAttribute="centerX" secondItem="Cmz-uU-I9I" secondAttribute="centerX" id="nDy-so-oaU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lUW-It-uxa" firstAttribute="top" secondItem="sEG-oU-Li0" secondAttribute="bottom" id="6tJ-xZ-Ilz"/>
+                            <constraint firstItem="lUW-It-uxa" firstAttribute="top" secondItem="sEG-oU-Li0" secondAttribute="bottom" id="8lX-st-4YT"/>
+                            <constraint firstItem="sEG-oU-Li0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="Mtw-LM-TrU"/>
+                            <constraint firstItem="sEG-oU-Li0" firstAttribute="height" secondItem="lUW-It-uxa" secondAttribute="height" id="PNm-DU-MR5"/>
+                            <constraint firstItem="sEG-oU-Li0" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="UNI-O2-EiW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lUW-It-uxa" secondAttribute="trailing" constant="-16" id="VXs-rf-HR3"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="lUW-It-uxa" secondAttribute="bottom" id="ZCJ-sg-0n6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sEG-oU-Li0" secondAttribute="trailing" constant="-16" id="fDz-TP-LbO"/>
+                            <constraint firstItem="lUW-It-uxa" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="quL-AF-1qw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomImgView" destination="6I7-W2-Dah" id="wcw-ik-w0V"/>
+                        <outlet property="bottomSwitch" destination="Cmz-uU-I9I" id="VdK-8M-hwh"/>
+                        <outlet property="bottomView" destination="lUW-It-uxa" id="Vlw-Kt-cct"/>
+                        <outlet property="lblBottom" destination="W1v-SF-NvF" id="LxQ-WD-tMS"/>
+                        <outlet property="lblTop" destination="gtA-cb-KKz" id="Ala-uD-c8F"/>
+                        <outlet property="topImgView" destination="c6q-XO-Rfv" id="AoG-fd-GUr"/>
+                        <outlet property="topSwitch" destination="S6A-xt-2qk" id="CTe-JR-Tmy"/>
+                        <outlet property="topView" destination="sEG-oU-Li0" id="Ge4-dK-5n2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="blue-circle.png" width="800" height="800"/>
+        <image name="purple-circle.png" width="800" height="800"/>
+    </resources>
+</document>
